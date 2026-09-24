@@ -1,0 +1,17 @@
+ * {
+	border: 1px;
+	border-radius: 0px;
+	font-family: JetBrains-Mono;
+}
+window#waybar {
+	background-color: #090d16;
+	border-bottom: 1px solid #f3e6bd
+}
+label.module {
+	background-color: transparent;
+	color: #f3e6bd
+}
+box.module {
+	background-color: transparent;
+	color: #f3e6bd
+}
