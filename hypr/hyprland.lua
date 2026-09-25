@@ -49,14 +49,14 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 for i = 1, 10 do
     local key = i % 10
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -z"))
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output -z"))
+hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("hyprshot -m output -z"))
 hl.bind("SUPER + V", hl.dsp.window.float(toggle, window))
 hl.bind("SUPER + C", hl.dsp.window.close(window))
-hl.bind("SUPER + M", hl.dsp.exec_cmd("hyprshutdown")) 
+hl.bind("SUPER + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")) 
 hl.bind("SUPER + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + up",    hl.dsp.focus({ direction = "up" }))
